@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class SpawnScript : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class SpawnScript : MonoBehaviour
     IEnumerator StartSpawning(){
         yield return new WaitForSeconds(4);
         for(int i=0;i<3;i++){
-            Instantiate(balloons[i],spawnPoints[i].position,Quaternion.identity);
+            PhotonNetwork.Instantiate(balloons[i].name,spawnPoints[i].position,Quaternion.identity);
         }
 
         StartCoroutine(StartSpawning());
