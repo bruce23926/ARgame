@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
-public class Score : MonoBehaviourPun
+public class score2 : MonoBehaviourPun
 {
     private Text score;
     private int scoreAmount;
@@ -24,7 +24,7 @@ public class Score : MonoBehaviourPun
 
     public void AddScore()
     {
-        scoreAmount += 2;
+        scoreAmount += 1;
     }
 
 }

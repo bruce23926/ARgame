@@ -7,7 +7,7 @@ public class ShootScript : MonoBehaviourPun
     public GameObject arCamera;
     public GameObject smoke;
     public GameObject scoreboard;
-    
+    public GameObject scoreboard2;
 
     public void Shoot(){
         RaycastHit hit;
@@ -18,13 +18,19 @@ public class ShootScript : MonoBehaviourPun
                 //if (target != Player) {
                     //target.TransferOwnership();
                 //}
-                hit.transform.gameObject.GetComponent<BalloonScript>().request();
+                if (hit.transform.gameObject.GetComponent<PhotonView>().IsMine) {
+                    scoreboard.GetComponent<Score>().AddScore();
+                } else {
+                    hit.transform.gameObject.GetComponent<BalloonScript>().request();
+                    scoreboard2.GetComponent<score2>().AddScore();
+                }
+                
                 PhotonNetwork.Destroy(hit.transform.gameObject);
                 //hit.transform.gameObject.GetComponent<BalloonScript>().shot();
                 //hit.transform.position = new Vector3(0, 2.9f, 0);
                 
                 PhotonNetwork.Instantiate(smoke.name,hit.point,Quaternion.LookRotation(hit.normal));
-                scoreboard.GetComponent<Score>().AddScore();
+                
             }
         }
     }

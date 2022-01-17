@@ -24,7 +24,7 @@ public class BalloonScript : MonoBehaviourPun
 
     public void request() {
         base.photonView.RequestOwnership();
-        
+        PhotonNetwork.Destroy(gameObject);
     }
     //public void shot() {
     //    PhotonNetwork.Destroy(gameObject);
