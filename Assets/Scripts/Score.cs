@@ -7,24 +7,20 @@ using Photon.Pun;
 public class Score : MonoBehaviourPun
 {
     private Text score;
-    private int scoreAmount;
+    
+    public GameObject main;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreAmount = 0;
+        
         score = GetComponent<Text>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        score.text = scoreAmount.ToString();
-    }
-
-    public void AddScore()
-    {
-        scoreAmount += 2;
+        score.text = main.GetComponent<onlineSpawner>().scoreA.ToString();
     }
 
 }

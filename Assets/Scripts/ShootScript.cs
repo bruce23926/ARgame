@@ -8,6 +8,7 @@ public class ShootScript : MonoBehaviourPun
     public GameObject smoke;
     public GameObject scoreboard;
     public GameObject scoreboard2;
+    public GameObject spawner;
 
     public void Shoot(){
         RaycastHit hit;
@@ -19,10 +20,11 @@ public class ShootScript : MonoBehaviourPun
                     //target.TransferOwnership();
                 //}
                 if (hit.transform.gameObject.GetComponent<PhotonView>().IsMine) {
-                    scoreboard.GetComponent<Score>().AddScore();
+                    
+                    spawner.GetComponent<onlineSpawner>().s1();
                 } else {
                     hit.transform.gameObject.GetComponent<BalloonScript>().request();
-                    scoreboard2.GetComponent<score2>().AddScore();
+                    spawner.GetComponent<onlineSpawner>().s2();
                 }
                 
                 PhotonNetwork.Destroy(hit.transform.gameObject);
@@ -34,6 +36,6 @@ public class ShootScript : MonoBehaviourPun
             }
         }
     }
-    // Start is called before the first frame update
+    
     
 }

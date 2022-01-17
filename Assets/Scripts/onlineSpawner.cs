@@ -7,7 +7,8 @@ public class onlineSpawner : MonoBehaviourPun
 {
     public Vector3[] spawnPoints = new Vector3[3];
     public GameObject[] balloons;
-    
+    public int scoreA = 0;
+    public int scoreB = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,10 @@ public class onlineSpawner : MonoBehaviourPun
         StartCoroutine(StartSpawning());
     }
     // Update is called once per frame
-    
+    public void s1() {
+        scoreA += 1;
+    }
+    public void s2() {
+        scoreB += 1;
+    }
 }
