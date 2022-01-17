@@ -14,6 +14,10 @@ public class BalloonScript : MonoBehaviour
         if (die == true) {
             PhotonNetwork.Destroy(gameObject);
         }
+
+        if (transform.position.y > 3) {
+            PhotonNetwork.Destroy(gameObject);
+        }
     }
 
     
