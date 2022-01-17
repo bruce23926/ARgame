@@ -16,7 +16,7 @@ public class onlineSpawner : MonoBehaviour
     IEnumerator StartSpawning(){
         yield return new WaitForSeconds(4);
         for(int i=0;i<3;i++){
-            PhotonNetwork.Instantiate(balloons[i].name,spawnPoints[i],Quaternion.identity);
+            PhotonNetwork.InstantiateRoomObject(balloons[i].name,spawnPoints[i],Quaternion.identity);
         }
 
         StartCoroutine(StartSpawning());

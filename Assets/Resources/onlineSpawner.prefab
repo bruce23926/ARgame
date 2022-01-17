@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7742691810746915975}
   - component: {fileID: 3965182628235190698}
-  - component: {fileID: 9083535384550066540}
   m_Layer: 0
   m_Name: onlineSpawner
   m_TagString: Untagged
@@ -52,25 +51,3 @@ MonoBehaviour:
   - {fileID: 8436674369471353028, guid: d1f0ef3dac961e64db59cead057cadfa, type: 3}
   - {fileID: 5615307120948054179, guid: 1d82db7c9ee9adf4e9059e336ab3c13a, type: 3}
   - {fileID: 8718317843907873632, guid: 6c9c0777b28d0bd43a8e81c97a31ac34, type: 3}
---- !u!114 &9083535384550066540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2566933419877235945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
