@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class onlineSpawner : MonoBehaviour
+public class onlineSpawner : MonoBehaviourPun
 {
     public Vector3[] spawnPoints = new Vector3[3];
     public GameObject[] balloons;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +23,5 @@ public class onlineSpawner : MonoBehaviour
         StartCoroutine(StartSpawning());
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
