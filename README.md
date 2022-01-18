@@ -1,5 +1,7 @@
 # ARgame
 Unity版本: 2019.4.32f1
+ARCore XR Plugin 2.1.18
+XR Plugin Management 4.0.1
 
 1/8/2021
 分數程式
